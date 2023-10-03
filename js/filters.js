@@ -1,11 +1,13 @@
 let anexo = document.getElementById("Anexo")
+let sectionBody = document.getElementById("bodyContainer")
 
 anexo.addEventListener("click", respuestaClick)
 
 let filtro = document.getElementById("filterContainer")
 let filtroDiv = document.createElement("div")
 let cerrarDiv = document.createElement("div")
-filtro.style.display = "none";  
+filtro.style.display = "none";
+filtro.style.opacity = "0";
 
 let panel1 = document.createElement("div")
 /* let panel2 = document.createElement("div") */
@@ -44,11 +46,23 @@ filtros[1].setAttribute("class", "filtro")
 filtros[2].setAttribute("class", "filtro")
 filtros[3].setAttribute("class", "filtro")
 
-filtros[0].setAttribute("href", "anexogobierno.html")
-filtros[1].setAttribute("href", "anexoleyes.html")
-filtros[2].setAttribute("href", "anexomovpoliticos.html")
-filtros[3].setAttribute("href", "anexosucesos.html")
+const enAnexo = (window.location.href.includes("index") || window.location.href.includes("anexog") || window.location.href.includes("anexol") || window.location.href.includes("anexos") || window.location.href.includes("anexom")) ? true : false
 
+enAnexo ? etiquetaUno() : etiquetaDos()
+
+function etiquetaUno() {
+    filtros[0].setAttribute("href", "anexogobierno.html")
+    filtros[1].setAttribute("href", "anexoleyes.html")
+    filtros[2].setAttribute("href", "anexosucesos.html")
+    filtros[3].setAttribute("href", "anexomovpoliticos.html")
+}
+
+function etiquetaDos() {
+    filtros[0].setAttribute("href", "../anexogobierno.html")
+    filtros[1].setAttribute("href", "../anexoleyes.html")
+    filtros[2].setAttribute("href", "../anexosucesos.html")
+    filtros[3].setAttribute("href", "../anexomovpoliticos.html")
+}
 
 filtroDiv.setAttribute("id", "panel")
 cerrarDiv.setAttribute("id", "cerrarPanel")
@@ -81,6 +95,8 @@ function respuestaClick() {
     if (filtroVisible == 0) {
         filtro.innerHTML += filtroDiv.outerHTML
         filtro.style.display = "block";
+        filtro.style.opacity = "1";
+        filtro.style.transition = ".5s opacity ,.5s display";
         ++filtroVisible
     }else if (filtroVisible == 1) {
         filtro.style.display = "none";

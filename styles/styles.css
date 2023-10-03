@@ -1,7 +1,6 @@
 body {
     margin: 0%;
     padding: 0%;
-    background-image: url(../src/img/fondo.png);
     background-size: 100%;
     background-repeat: repeat-y;
 }
@@ -40,14 +39,11 @@ a:active:visited {
 }
 
 #mainContainer {
+    user-select: none;  
     width: auto;
     background-color: rgb(18, 18, 18,.85);
     display: flex;
     gap: 3%;
-}
-
-#searchContainer {
-    bottom: 5px;
 }
 
 #panel {
@@ -78,6 +74,10 @@ a:active:visited {
     transition: 0.1s;
     padding-left: 6px;
     padding-right: 6px;
+}
+
+.filtro [open] {
+    animation: forwards 500ms;
 }
 
 .filtro:first-child {
@@ -154,14 +154,23 @@ a:active:visited {
     color: rgb(255, 213, 33);
 }
 
-
+#home {
+    font-size: 32px;
+    margin-top: 12px;
+    border: none;
+    background-color: transparent;
+    border-bottom: rgb(30, 116, 253) 4px solid;
+    color: rgb(30, 116, 253);
+    transition: 0.1s;
+}
 
 .searchBox {
+    position: absolute;
+    top: 4%;
     font-family: 'Franklin Gothic Medium';
     font-size: 16px;
     margin-right: 2%;
-    width: 100%;
-    transform: translate(0, 88%);
+    width: 10%;
     padding-left: 12px;
     height: 33px;
     border: rgba(30, 116, 253, 0) 3px solid;
@@ -177,7 +186,7 @@ a:active:visited {
 }
 
 .searchBox:focus {
-    width: 190%;
+    width: 20%;
     height: -6px;
     border: rgb(30, 116, 253) 3px solid;
     outline: none;
@@ -188,6 +197,7 @@ a:active:visited {
 #cardContainer {
     display: flex;
     flex-direction: column;
+    position: absolute;
 }
 
 .card-img-top {
@@ -233,10 +243,18 @@ a:active:visited {
     background-color: aliceblue;
     object-fit: contain;
     border: none;
+    position: absolute;
     transform: translate(432%, 8%);
     font-family: 'Franklin Gothic Medium';
     display: flex;
     width: 280px;
     height: 140px;
     gap: 4px;
+}
+
+#footer {
+    position: relative;
+    color: white;
+    margin-top: 5%;
+    background-color: black;
 }

@@ -26,7 +26,7 @@ const imagenes = [
     },
     {
         id: 5,
-        url: '../../src/img/descargar_(1).jpg',
+        url: '../../src/img/descargar(1).jpg',
         info: ''
     },
     {
@@ -91,18 +91,120 @@ const imagenes = [
     }
 ]
 
+const primeraParte1 = imagenes.slice(0, 3)
+const primeraParte2 = imagenes.slice(3, 6)
+const segundaParte1 = imagenes.slice(6, 9)
+const segundaParte2 = imagenes.slice(9, 12)
+const terceraParte1 = imagenes.slice(12, 15)
+const terceraParte2 = imagenes.slice(15, 18)
+
+console.log(primeraParte1, primeraParte2)
 let bodyContainer = document.getElementById("bodyContainer")
-let contentContainer = document.getElementsByClassName("contentContainer")
+let contentContainer = document.createElement("div")
+bodyContainer.appendChild(contentContainer)
+contentContainer.setAttribute("class", "contentContainer")
+let imgContainer = document.createElement("div")
+imgContainer.setAttribute("class", "imgContainer")
+imgContainer.innerHTML = ''
+contentContainer.appendChild(imgContainer)
 
-let galeriaHTML = `
-    <div class="imgContainer">
-        <img src="${imagenes.map((el) => {el.url}).join("")}" alt="">
-        <p></p>
-    </div>
-`
+let primerBtn = document.createElement("button")
+let primerBtnTexto = document.createTextNode("<<")
+primerBtn.appendChild(primerBtnTexto)
+contentContainer.appendChild(primerBtn)
+primerBtn.setAttribute("id", "btn1")
+let segundoBtn = document.createElement("button")
+let segundoBtnTexto = document.createTextNode(">>")
+segundoBtn.appendChild(segundoBtnTexto)
+contentContainer.appendChild(segundoBtn)
+segundoBtn.setAttribute("id", "btn2")
 
-for (imagen in imagenes) {
-    bodyContainer.innerHTML = ''
-    contentContainer.innerHTML += galeriaHTML.outerHTML
-    console.log(galeriaHTML)
+let conteo = 0
+
+primerBtn.addEventListener("click", () => {
+    conteo -= 1
+    console.log(conteo)
+    mostrarGaleria()
+})
+
+segundoBtn.addEventListener("click", () => {
+    conteo++
+    console.log(conteo)
+    mostrarGaleria()
+})
+
+function mostrarGaleria() {
+    if (conteo == 0) {
+        imgContainer.innerHTML = ""
+        primerBtn.style.display = "none";
+        for (imagen in primeraParte1) {
+            imgContainer.innerHTML = primeraParte1.map((item) => {
+                let { url, info } = item;
+                return `
+                    <img class="imgGal" src="${url}" alt="">
+                    <p class="pGal">${info}</p>
+                `
+            }).join("")
+        }
+    }else if (conteo == 1) {
+        imgContainer.innerHTML = ""
+        primerBtn.style.display = "block";
+        for (imagen in primeraParte2) {
+            imgContainer.innerHTML = primeraParte2.map((item) => {
+                let { url, info } = item;
+                return `
+                    <img class="imgGal" src="${url}" alt="">
+                    <p class="pGal">${info}</p>
+                `
+            }).join("")
+        }
+    }else if (conteo == 2) {
+        imgContainer.innerHTML = ""
+        for (imagen in segundaParte1) {
+            imgContainer.innerHTML = segundaParte1.map((item) => {
+                let { url, info } = item;
+                return `
+                    <img class="imgGal" src="${url}" alt="">
+                    <p class="pGal">${info}</p>
+                `
+            }).join("")
+        }
+    }else if (conteo == 3) {
+        imgContainer.innerHTML = ""
+        for (imagen in segundaParte2) {
+            imgContainer.innerHTML = segundaParte2.map((item) => {
+                let { url, info } = item;
+                return `
+                    <img class="imgGal" src="${url}" alt="">
+                    <p class="pGal">${info}</p>
+                `
+            }).join("")
+        }
+    }else if (conteo == 4) {
+        segundoBtn.style.display = "block";
+        imgContainer.innerHTML = ""
+        for (imagen in terceraParte1) {
+            imgContainer.innerHTML = terceraParte1.map((item) => {
+                let { url, info } = item;
+                return `
+                    <img class="imgGal" src="${url}" alt="">
+                    <p class="pGal">${info}</p>
+                `
+            }).join("")
+        }
+    }else {
+        segundoBtn.style.display = "none";
+        imgContainer.innerHTML = ""
+        for (imagen in terceraParte2) {
+            imgContainer.innerHTML = terceraParte2.map((item) => {
+                let { url, info } = item;
+                return `
+                    <img class="imgGal" src="${url}" alt="">
+                    <p class="pGal">${info}</p>
+                `
+            }).join("")
+        }
+    }
 }
+
+mostrarGaleria()

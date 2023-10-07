@@ -98,7 +98,6 @@ const segundaParte2 = imagenes.slice(9, 12)
 const terceraParte1 = imagenes.slice(12, 15)
 const terceraParte2 = imagenes.slice(15, 18)
 
-console.log(primeraParte1, primeraParte2)
 let bodyContainer = document.getElementById("bodyContainer")
 let contentContainer = document.createElement("div")
 bodyContainer.appendChild(contentContainer)
@@ -123,13 +122,11 @@ let conteo = 0
 
 primerBtn.addEventListener("click", () => {
     conteo -= 1
-    console.log(conteo)
     mostrarGaleria()
 })
 
 segundoBtn.addEventListener("click", () => {
     conteo++
-    console.log(conteo)
     mostrarGaleria()
 })
 

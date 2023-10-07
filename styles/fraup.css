@@ -1,0 +1,38 @@
+.info {
+    border: 2px solid black;
+    background-color: rgb(205, 205, 205);
+}
+
+.conservador {
+    border: 2px solid black;
+    border-top: 2px solid rgba(192, 231, 248, 0);
+    background-color: rgb(192, 231, 248);
+}
+
+.radicales {
+    border: 2px solid black;
+    border-top: 2px solid rgba(192, 231, 248, 0);
+    background-color: rgb(206, 17, 42);
+}
+
+.alianza {
+    border: 2px solid black;
+    border-top: 2px solid rgba(192, 231, 248, 0);
+    background-color: rgb(255, 198, 132);
+}
+
+.progresista {
+    border: 2px solid black;
+    border-top: 2px solid rgba(192, 231, 248, 0);
+    background-color: rgb(125, 147, 255);
+}
+
+.partidoParte {
+    border-right: 1px solid black;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+.partidoParte:first-child {
+    padding-left: 0%;
+}

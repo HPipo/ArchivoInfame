@@ -209,7 +209,7 @@ a:active:visited {
     background-color: aliceblue;
     object-fit: contain;
     border: none;
-    transform: translate(432%, 8%);
+    transform: translate(455%, 8%);
     font-family: 'Franklin Gothic Medium';
     display: flex;
     width: 280px;
@@ -244,7 +244,7 @@ a:active:visited {
     object-fit: contain;
     border: none;
     position: absolute;
-    transform: translate(432%, 8%);
+    transform: translate(455%, 8%);
     font-family: 'Franklin Gothic Medium';
     display: flex;
     width: 280px;

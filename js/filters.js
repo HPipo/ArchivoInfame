@@ -102,4 +102,7 @@ function respuestaClick() {
         filtro.style.display = "none";
         filtroVisible = 0
     }
+    setTimeout(() => {
+        filtro.style.display = "none";
+    }, 6000)
 }

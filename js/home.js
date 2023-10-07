@@ -1,3 +1,5 @@
+import Swal from "sweetalert2"
+
 let home = document.getElementById("Home")
 let path = document.location.pathname
 
@@ -10,7 +12,9 @@ function etiquetaTres() {
         if (!path.includes("index")) {
             window.location.href = "index.html"
         }else {
-            console.log("ERROR: usuario ya se encuentra en index")
+            Swal.fire(
+                'HOLA'
+            )
         }
     })
 }

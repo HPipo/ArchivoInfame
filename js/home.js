@@ -1,5 +1,3 @@
-import Swal from "sweetalert2"
-
 let home = document.getElementById("Home")
 let path = document.location.pathname
 
@@ -12,9 +10,11 @@ function etiquetaTres() {
         if (!path.includes("index")) {
             window.location.href = "index.html"
         }else {
-            Swal.fire(
-                'HOLA'
-            )
+            Swal.fire({
+                icon: 'error',
+                title: 'Ups...',
+                text: '¡Ya se encuentra en la página!'
+              })
         }
     })
 }

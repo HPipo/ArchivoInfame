@@ -10,7 +10,11 @@ function etiquetaTres() {
         if (!pathGal.includes("galeria")) {
             window.location.href = "galeria/galeria.html"
         }else {
-            console.log("ERROR: usuario ya se encuentra en index")
+            Swal.fire({
+                icon: 'error',
+                title: 'Ups...',
+                text: '¡Ya se encuentra en la página!'
+              })
         }
     })
 }
@@ -20,7 +24,11 @@ function etiquetaCuatro() {
         if (!pathGal.includes("galeria")) {
             window.location.href = "../galeria/galeria.html"
         }else {
-            console.log("ERROR: usuario ya se encuentra en index")
+            Swal.fire({
+                icon: 'error',
+                title: 'Ups...',
+                text: '¡Ya se encuentra en la página!'
+              })
         }
     })
 }

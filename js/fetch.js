@@ -2,8 +2,8 @@ fetch("../../card.json")
     .then((res) => res.json())
     .then((data) =>{
         if (window.location.href.includes("uriburu")) {
-            for (element in data.presidente) {
-                console.log(data)
+            for (let element in data.presidente) {
+                console.log(element)
             }
         }
     })

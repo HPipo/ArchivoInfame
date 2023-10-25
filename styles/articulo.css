@@ -23,7 +23,7 @@ h4 {
     display: flex;
 }
 
-.cardPresidencial {
+#cardPresidencial {
     display: grid;
     background-color: rgb(190, 180, 241);
     text-align: center; 

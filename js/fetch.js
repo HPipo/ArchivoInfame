@@ -18,7 +18,7 @@ fetch("../../card.json")
                 `
             }
         }else {
-            for (let element in data.presidente) {
+            for (let element in data) {
                 cardPres.innerHTML += `
                 <p class="cardPresElemento">${element.castillo[0]}</p>
                 <img class="cardPresElemento" id="presImg" src="${element.castillo[1]}" alt="">

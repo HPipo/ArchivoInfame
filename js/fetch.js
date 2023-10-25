@@ -18,16 +18,16 @@ fetch("../../card.json")
                 `
             }
         }else {
-            for (let element in data) {
+            for (let presidente in data) {
                 cardPres.innerHTML += `
-                <p class="cardPresElemento">${element.castillo[0]}</p>
-                <img class="cardPresElemento" id="presImg" src="${element.castillo[1]}" alt="">
+                <p class="cardPresElemento">${presidente.castillo[0]}</p>
+                <img class="cardPresElemento" id="presImg" src="${presidente.castillo[1]}" alt="">
                 <div class="cardPresElemento">
-                    <p>${element.castillo[2]}</p>
-                    <p>${element.castillo[3]}</p>
+                    <p>${presidente.castillo[2]}</p>
+                    <p>${presidente.castillo[3]}</p>
                 </div>
-                <p class="cardPresElemento">${element.castillo[4]}</p>
-                <p class="cardPresElemento">${element.castillo[5]}</p>`
+                <p class="cardPresElemento">${presidente.castillo[4]}</p>
+                <p class="cardPresElemento">${presidente.castillo[5]}</p>`
         }}
     })
     .catch("Error en JSON")

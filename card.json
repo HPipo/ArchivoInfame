@@ -1,44 +1,46 @@
-{
-    "presidente": {
-        "uriburu": [
-            {
-                "nombre": "José Félix Uriburu",
-                "img": "../../src/img/José_Félix_Uriburu.jpg",
-                "titulo": "Presidente de la nación argentina",
-                "duracion": "Del 6 de septiembre de 1930 al 20 de febrero de 1932",
-                "nacimiento": "Nació el 20 de julio de 1868 Salta (Argentina)",
-                "fallecimiento": "Falleció el 29 de abril de 1932 (63 años) París (Francia)"
-            }
-        ],
-        "justo": [
-            {
-                "nombre": "Agustín Pedro Justo",
-                "img": "../../src/img/Presidente_Agustín_Pedro_Justo.png",
-                "titulo": "Presidente de la nación argentina",
-                "duracion": "Del 20 de febrero de 1932 al 20 de febrero de 1938",
-                "nacimiento": "Nació el 27 de febrero de 1876 (Concepción del Uruguay, Entre Ríos, Argentina)",
-                "fallecimiento": "Falleció el 11 de enero de 1943 (66 años) (Buenos Aires, Argentina)"
-            }
-        ],
-        "ortiz": [
-            {
-                "nombre": "Roberto Marcelino Ortiz",
-                "img": "../../src/img/Robertomortiz.jpg",
-                "titulo": "Presidente de la nación argentina",
-                "duracion": "Del 20 de febrero de 1938 al 27 de junio de 1942",
-                "nacimiento": "Nació el 24 de septiembre de 1886 Buenos Aires, Argentina",
-                "fallecimiento": "Falleció el 27 de junio de 1942 (55 años) Buenos Aires, Argentina"
-            }
-        ],
-        "castillo": [
-            {
-                "nombre": "Ramón Antonio Castillo",
-                "img": "../../src/img/Ramoncastillo.jpg",
-                "titulo": "Presidente de la nación argentina",
-                "duracion": "Del 27 de junio de 1942 al 4 de junio de 1943",
-                "nacimiento": "20 de noviembre de 1873 Ancasti (Argentina)",
-                "fallecimiento": "12 de octubre de 1944 (70 años) Buenos Aires (Argentina)"
-            }
-        ]
+[
+    {
+        "presidente": {
+            "uriburu": [
+                {
+                    "nombre": "José Félix Uriburu",
+                    "img": "../../src/img/José_Félix_Uriburu.jpg",
+                    "titulo": "Presidente de la nación argentina",
+                    "duracion": "Del 6 de septiembre de 1930 al 20 de febrero de 1932",
+                    "nacimiento": "Nació el 20 de julio de 1868 Salta (Argentina)",
+                    "fallecimiento": "Falleció el 29 de abril de 1932 (63 años) París (Francia)"
+                }
+            ],
+            "justo": [
+                {
+                    "nombre": "Agustín Pedro Justo",
+                    "img": "../../src/img/Presidente_Agustín_Pedro_Justo.png",
+                    "titulo": "Presidente de la nación argentina",
+                    "duracion": "Del 20 de febrero de 1932 al 20 de febrero de 1938",
+                    "nacimiento": "Nació el 27 de febrero de 1876 (Concepción del Uruguay, Entre Ríos, Argentina)",
+                    "fallecimiento": "Falleció el 11 de enero de 1943 (66 años) (Buenos Aires, Argentina)"
+                }
+            ],
+            "ortiz": [
+                {
+                    "nombre": "Roberto Marcelino Ortiz",
+                    "img": "../../src/img/Robertomortiz.jpg",
+                    "titulo": "Presidente de la nación argentina",
+                    "duracion": "Del 20 de febrero de 1938 al 27 de junio de 1942",
+                    "nacimiento": "Nació el 24 de septiembre de 1886 Buenos Aires, Argentina",
+                    "fallecimiento": "Falleció el 27 de junio de 1942 (55 años) Buenos Aires, Argentina"
+                }
+            ],
+            "castillo": [
+                {
+                    "nombre": "Ramón Antonio Castillo",
+                    "img": "../../src/img/Ramoncastillo.jpg",
+                    "titulo": "Presidente de la nación argentina",
+                    "duracion": "Del 27 de junio de 1942 al 4 de junio de 1943",
+                    "nacimiento": "20 de noviembre de 1873 Ancasti (Argentina)",
+                    "fallecimiento": "12 de octubre de 1944 (70 años) Buenos Aires (Argentina)"
+                }
+            ]
+        }
     }
-}
+]
